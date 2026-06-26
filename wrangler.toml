@@ -1,0 +1,16 @@
+name = "x-safe-worker-manager"
+main = "src/index.js"
+compatibility_date = "2026-06-26"
+workers_dev = true
+
+# Runs scheduled queued posts every 5 minutes. Change if needed.
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "x_manager_db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# Optional plain variables. Put secrets with `wrangler secret put`, not here.
+# BASE_URL = "https://your-worker.your-subdomain.workers.dev"
